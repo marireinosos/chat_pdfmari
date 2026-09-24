@@ -1,68 +1,7 @@
-
-💄✨ Glow Coach — Tu Asistente de Maquillaje Personal con IA
-Streamlit + LangChain + OpenAI
-
-Instalación:
-    pip install streamlit PyPDF2 pillow langchain langchain-openai langchain-community faiss-cpu
-
-Ejecución:
-    streamlit run app.py
-
-Archivo de imagen necesario en la misma carpeta:
-    BANNER-COLECCION.jpg.webp   (banner principal)
-"""
-
-import os
-import streamlit as st
-from PIL import Image
-from PyPDF2 import PdfReader
-from langchain.text_splitter import CharacterTextSplitter
-from langchain_openai import OpenAIEmbeddings, ChatOpenAI
-from langchain_community.vectorstores import FAISS
-
-# ─────────────────────────────────────────────
-# CONFIGURACIÓN
-# ─────────────────────────────────────────────
-st.set_page_config(
-    page_title="Glow Coach 💄",
-    page_icon="💄",
-    layout="wide",
-    initial_sidebar_state="expanded",
-)
-
-# ─────────────────────────────────────────────
-# ESTILOS — tema glam / rosa-dorado con brillo
-# ─────────────────────────────────────────────
-st.markdown("""
-<style>
-    @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Space+Grotesk:wght@400;500;600;700&display=swap');
-
-    html, body, [class*="css"] { font-family: 'Space Grotesk', sans-serif; }
-
-    @keyframes glowShift {
-        0%   { background-position: 0% 50%; }
-        50%  { background-position: 100% 50%; }
-        100% { background-position: 0% 50%; }
-    }
-    .stApp {
-        background: linear-gradient(120deg, #2b0f26, #4a1942, #6b1e3c, #3a1230, #2b0f26);
-        background-size: 400% 400%;
-        animation: glowShift 26s ease infinite;
-    }
-
-    [data-testid="stSidebar"] {
-        background: rgba(30, 10, 26, 0.8) !important;
-        backdrop-filter: blur(18px);
-        border-right: 1px solid rgba(255,215,180,0.12);
-    }
-    [data-testid="stSidebar"] h2, [data-testid="stSidebar"] h3 {
-        background: linear-gradient(90deg, #ffd6a5, #ff8fb1);
-        -webkit-background-clip: text;
-        -webkit-text-fill-color: transparent;
-        font-weight: 700 !important;
-        text-transform: uppercase !important;
-        letter-spacing: 1px !important;
-    }
+File "/mount/src/chat_pdfmari/app.py", line 2
+  💄✨ Glow Coach — Tu Asistente de Maquillaje Personal con IA
+  ^
+SyntaxError: invalid character '💄' (U+1F484)    }
     [data-testid="stSidebar"] p, [data-testid="stSidebar"] label { color: #f0d9e6 !important; font-size: 0.87rem !important; }
 
     h1 {
