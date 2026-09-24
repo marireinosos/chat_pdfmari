@@ -1,4 +1,4 @@
-"""
+
 💄✨ Glow Coach — Tu Asistente de Maquillaje Personal con IA
 Streamlit + LangChain + OpenAI
 
